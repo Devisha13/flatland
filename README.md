@@ -21,7 +21,9 @@ flatland.html
 
 </html>
 
-
+function clicked() {
+var msg ="Build a<br>" +createBuzzwordPharse();
+words.innerHTML = msg;
 
 style.css
 
@@ -37,6 +39,7 @@ body {
   width: 550px;
   margin: 0 auto;
 }
+words.innerHTML = "welcome to Flatland <br> i am square!"
 
 #square {
   float:left;
@@ -56,7 +59,7 @@ body {
   border-radius: 10%;
   border-right: 5px solid red;
 }
-
+document.onload = greetings()
 
 Buzzword Phrase Generator (JavaScript)
 
@@ -70,5 +73,4 @@ function createBuzzwordPhrase() {
     let idx_act = Math.floor(Math.random() * action.length);
     let idx_out = Math.floor(Math.random() * outcome.length);
 
-    return  buzz[idx_buz] + " " + action[idx_act] + " " + outcome[idx_out];
-}
+    return  buzz[idx_buz] + " " + action[idx_act] + " " + outcome[idx_out]
